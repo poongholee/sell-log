@@ -22,7 +22,7 @@ $ git clone https://github.com/LeePoongHo/group-purchase-react
 $ npm install
 ```
 
-2. Install hexo package
+2. Start React
 ```
-$ yarn start
+$ npm start
 ```
