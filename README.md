@@ -13,6 +13,9 @@ $ sudo npm install -g yarn
 ## Getting Started
 
 0. Clone git repository
+```
+$ git clone https://github.com/LeePoongHo/group-purchase-react
+```
 
 1. Install modules
 ```
