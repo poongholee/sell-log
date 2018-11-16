@@ -1,6 +1,6 @@
 .header {
     width: 100%;
-    background: #782fff;
+    background: #816bff;
     position: relative;
     z-index: 11;
     background-repeat: no-repeat;
@@ -17,7 +17,7 @@
     position: relative;
     min-height: 116px;
     color: #fff;
-    border-bottom: 1px solid #664ab9;
+    border-bottom: 1px solid #816bff;
 }
 
 .logo {

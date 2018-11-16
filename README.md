@@ -1,9 +1,13 @@
 # Sell Log
-1인가구 공동구매 서비스
 
-## Requirement
-- node.js
-- yarn
+> Sell Log is a service for group buying.
+
+### Client
+- React
+
+### Server
+- Node.js
+- Koa
 
 ### Install yarn
 ```
