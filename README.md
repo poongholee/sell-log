@@ -1,4 +1,4 @@
-# group-purchase-react
+# Sell Log
 1인가구 공동구매 서비스
 
 ## Requirement
