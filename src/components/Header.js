@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
+import HeaderTop from './HeaderTop';
+import '../styles/header.css';
 
 class Header extends Component {
     
     render() {
         return (
-            <div>
+            <div className='header'>
+                <HeaderTop />
             </div>
         );
     }    

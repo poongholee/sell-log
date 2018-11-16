@@ -1,0 +1,83 @@
+.header {
+    width: 100%;
+    background: #782fff;
+    position: relative;
+    z-index: 11;
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+
+.header *{
+    box-sizing: border-box;
+}
+
+.header-top {
+    width: 1200px;
+    margin: 0 auto;
+    position: relative;
+    min-height: 116px;
+    color: #fff;
+    border-bottom: 1px solid #664ab9;
+}
+
+.logo {
+    display: block;
+    position: absolute;
+    top: 40px;
+    left: 179px;
+    font-size: 32px;
+    font-weight: 700;
+}
+
+.btn-menu{
+    width: 52px;
+    height: 52px;
+    display: block;
+    text-indent: -99999px;
+    position: absolute;
+    left: 7px;
+    top: 33px;
+    background: url(../static/images/ic_menu.png) no-repeat 0 0;
+    background-size: 52px;
+    color: white;
+}
+
+.inner-search {
+    position: absolute;
+    left: 340px;
+    top: 34px;
+    width: 485px;
+}
+
+.inner-search .total-search {
+    position: relative;
+    width: 485px;
+    height: 50px;
+    line-height: 50px;
+    background: #fff;
+    border-radius: 45px;
+    padding-left: 22px;
+    padding-right: 55px;
+}
+
+.inner-search .total-search input[type="text"] {
+    height: 50px;
+    line-height: 50px;
+    border: 0;
+    font-size: 16px;
+    width: 400px;
+    vertical-align: top;
+    outline: none;
+}
+
+.inner-search .btn-search {
+    position: absolute;
+    right: 20px;
+    top: 12px;
+    width: 25px;
+    height: 25px;
+    display: block;
+    text-indent: -9999px;
+    border: white;
+    background: url(../static/images/ic_search.gif) no-repeat 0 0;
+}
