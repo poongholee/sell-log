@@ -4,7 +4,6 @@ class HeaderTop extends Component {
     render() {
         return (
             <div className="header-top">
-                <a className="btn-menu" href="">전체메뉴</a>
                 <div className="logo">SELL LOG</div>
                 <div className="inner-search">
                     <div className="total-search">
