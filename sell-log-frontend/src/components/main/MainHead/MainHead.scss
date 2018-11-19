@@ -1,0 +1,21 @@
+.MainHead {
+    width: 100%;
+    background: #816bff;
+    position: relative;
+    z-index: 11;
+    background-repeat: no-repeat;
+    background-position: top center;
+
+    * {
+        box-sizing: border-box;
+    }
+
+    .logo {
+        display: block;
+        position: absolute;
+        top: 40px;
+        left: 179px;
+        font-size: 32px;
+        font-weight: 700;
+    }
+}

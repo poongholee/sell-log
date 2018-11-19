@@ -1,33 +1,33 @@
-@font-face { 
-  font-family: 'NanumBarunGothic';
-  src: url('/fonts/NanumBarunGothic.eot');
-  src: url('/fonts/NanumBarunGothic.eot') format('embedded-opentype'),
-  url('/fonts/NanumBarunGothic.woff') format('woff');
+@font-face {
+    font-family: 'NanumBarunGothic';
+    src: url('/fonts/NanumBarunGothic.eot');
+    src: url('/fonts/NanumBarunGothic.eot') format('embedded-opentype'),
+    url('/fonts/NanumBarunGothic.woff') format('woff');
 }
-  
+
 body {
-  min-width: 320px;
-  height: auto;
-  position: relative;
-  margin: 0;
-  padding: 0;
-  font-size: 14px;
-  line-height: 1.3;
-  color: #666;
-  background-color: #fff;
-  word-spacing: -1px;
-  letter-spacing: -0.04em;
-  font-family:  'NanumBarunGothic', 'serif';
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;  
+    min-width: 320px;
+    height: auto;
+    position: relative;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+    line-height: 1.3;
+    color: #666;
+    background-color: #fff;
+    word-spacing: -1px;
+    letter-spacing: -0.04em;
+    font-family: 'NanumBarunGothic', 'serif';
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
 }
 
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
 
 div, h1, h2, h3, h4, h5, h6, ul, li, dl, dt, dd, p, form, fieldset, input, table, tr, th, td, button, textarea, select {
-  margin: 0;
-  padding: 0;
+    margin: 0;
+    padding: 0;
 }
