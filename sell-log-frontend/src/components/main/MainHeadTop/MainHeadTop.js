@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import MainHeadSearch from '../MainHeadSearch'
+import MainHeadSearch from '../MainHeadSearch';
+import MainHeadInfo from '../MainHeadInfo';
 
 import './MainHeadTop.scss'
 
@@ -13,6 +14,7 @@ class MainHeadTop extends Component {
                     SELL LOG
                 </Link>
                 <MainHeadSearch />
+                <MainHeadInfo />
             </div>
         );
     }
