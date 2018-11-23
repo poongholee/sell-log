@@ -1,12 +1,14 @@
 {
-    "parser": "babel-eslint",
-    "extends": "airbnb",
+    "extends": "airbnb-base",
     "plugins": [
         "react",
         "jsx-a11y",
         "import"
     ],
     "rules": {
-        "react/jsx-filename-extensions": 0
+        "no-unused-vars":1,
+        "comman-dangle" : 0,
+        "eol-last": 0,
+        "no-console": 0
     }
 }
