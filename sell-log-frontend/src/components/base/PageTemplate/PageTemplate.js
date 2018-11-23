@@ -1,22 +1,20 @@
-import React, { Component } from 'react';
+// @flow
+import React from 'react';
 import type { Node } from 'react';
 import './PageTemplate.scss';
 
-class PageTemplate extends Component {
+type Props = {
+  header: Node,
+  children: Node,
+};
 
-    render() {
-        return (
-            <div className="PageTemplate">
-                {header}
-                <main>{children}</main>
-            </div>
-        )
-    } 
-}
-
-PageTemplate.propTypes = {
-    header: Node,
-    children: Node
-}
+const PageTemplate = ({ header, children }: Props) => {
+  return (
+    <div className="PageTemplate">
+      {header}
+      <main>{children}</main>
+    </div>
+  );
+};
 
 export default PageTemplate;

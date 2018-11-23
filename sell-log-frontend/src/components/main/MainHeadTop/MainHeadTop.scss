@@ -1,8 +1,18 @@
-.header-top {
+.MainHeadTop {
     width: 1200px;
     margin: 0 auto;
     position: relative;
     min-height: 116px;
     color: #fff;
     border-bottom: 1px solid #816bff;
+
+    .logo {
+        display: block;
+        position: absolute;
+        background: none;
+        top: 40px;
+        left: 179px;
+        font-size: 32px;
+        font-weight: 700;
+    }
 }

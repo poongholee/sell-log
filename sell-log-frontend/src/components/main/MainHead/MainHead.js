@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import MainHeadTop from 'components/main/MainHeadTop'
+import MainHeadTop from '../MainHeadTop'
 
 import './MainHead.scss';
 
