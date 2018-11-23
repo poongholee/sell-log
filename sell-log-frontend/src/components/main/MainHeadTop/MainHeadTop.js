@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
-import MainHeadSearch from 'components/main/MainHeadSearch'
+import MainHeadSearch from '../MainHeadSearch'
 
 import './MainHeadTop.scss'
 

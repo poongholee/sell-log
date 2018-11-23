@@ -1,11 +1,11 @@
 import React, { Component } from 'react';
-import PageTemplate from 'components/base/PageTemplate';
-import MainHead from 'containers/main/MainHead';
+import PageTemplate from '../../base/PageTemplate';
+import MainHead from '../../main/MainHead';
 
 class Home extends Component { 
     render() {
         return (
-            <PageTemplate>
+            <PageTemplate >
                 <MainHead />
             </PageTemplate>
         )
