@@ -1,30 +1,38 @@
 import React, { Component } from 'react';
 import './MainFooterTop.scss';
+import './Footer.css';
+import ListMenu from './ListMenu';
 
 class MainFooterTop extends Component {
+
+    constructor(props) {
+        super(props);
+
+        this.state = {
+            listMenu : [
+                "회사소개",
+                "채용안내",
+                "가맹점 개설문의",
+                "제휴문의",
+                "사이버 감사실"
+            ]
+        }
+    }
+
     render() {
+
+        // map으로 컴포넌트 매핑
+        const mapToComponent = (listMenu) => {
+            return listMenu.map((item, index) => {
+                return (<ListMenu item={item} key={index}/>);
+            })         
+        }
+
         return (
             <div className="oneConts">
                 <div className="conts">
                     <ul className="list-menu">
-                        <li>
-                            <a href="#">회사소개</a>
-                        </li>
-                        <li>
-                            <a href="#">채용안내</a>
-                        </li>
-                        <li>
-                            <a href="#">가맹점 개설문의</a>
-                        </li>
-                        <li>
-                            <a href="#">제휴문의</a>
-                        </li>
-                        <li>
-                            <a href="#">사이버 감사실</a>
-                        </li>
-                        <li>
-                            <a href="#">고객센터</a>
-                        </li>
+                        {mapToComponent(this.state.listMenu)}
                     </ul>
                     <div className="sel_family_group">
                         <select
