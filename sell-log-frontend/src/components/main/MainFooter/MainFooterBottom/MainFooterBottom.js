@@ -2,7 +2,6 @@ import React, { Component } from 'react';
 import './Footer.css';
 import ListSns from './ListSns';
 
-
 class MainFooterBottom extends Component {
 
     constructor(props) {
