@@ -5,10 +5,18 @@
         "jsx-a11y",
         "import"
     ],
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        }
+    },
     "rules": {
-        "no-unused-vars":1,
-        "comman-dangle" : 0,
+        "no-unused-vars": 1,
+        "comman-dangle": 0,
         "eol-last": 0,
-        "no-console": 0
+        "no-console": 0,
+        "react/prop-types": 0,
+        "react/jsx-uses-react": "error",
+        "react/jsx-uses-vars": "error"
     }
 }

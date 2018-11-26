@@ -35,4 +35,14 @@ div, h1, h2, h3, h4, h5, h6, ul, li, dl, dt, dd, p, form, fieldset, input, table
 a {
     color: #666;
     text-decoration: none;
+
+}
+
+a:hover, a:active, a:focus, a:visited {
+    text-decoration: none;
+    color: inherit;
+}
+
+ul {
+    list-style: none;
 }
