@@ -1,22 +1,3 @@
-.log_area {
-    position: absolute;
-    left: 0;
-    top: -17px;
-    width: 197px;
-    padding: 0 10px;
-}
-
-.log_area a.btn_myN_list {
-    display: inline-block;
-    background: url(../../../static/images/ic_search.gif) no-repeat right center;
-    color: #fff;
-    font-size: 13px;
-    line-height: 1.5;
-    padding: 15px 28px 15px 10px;
-    min-width: 150px;
-    cursor: default;
-}
-
 .reN_content * {
     box-sizing: border-box;
     font-family: 'roboto','맑은 고딕','Malgun Gothic',dotum, '돋움', gulim, '굴림', Georgia, helvetica, sans-serif, Arial, verdana;
@@ -30,58 +11,54 @@
     z-index: 11;
 }
 
-.log_etc li {
-    float: left;
-    margin-left: 20px;
+.log_area {
+    position: absolute;
+    left: 0;
+    top: -17px;
+    width: 197px;
+    padding: 0 10px;
 
-    li:first-child {
-        margin-left: 0;
+    a.btn_myN_list {
+        display: inline-block;
+        background: url(../../../static/images/log_area_01_off.gif) no-repeat right center;
+        color: #fff;
+        font-size: 13px;
+        line-height: 1.5;
+        padding: 15px 28px 15px 10px;
+        min-width: 150px;
+        cursor: default;
     }
 }
 
-.log_area a.btn_myN_list {
-    display: inline-block;
-    background: url(../../../static/images/ic_search.gif) no-repeat 0 0;
-    color: #fff;
-    font-size: 13px;
-    line-height: 1.5;
-    padding: 15px 28px 15px 10px;
-    min-width: 150px;
-    cursor: default;
-}
-
-.log_etc .reN_barkete a {
-    width: 30px;
-    height: 30px;
-    display: block;
-    text-indent: -9999px;
-    background: url(../../../static/images/ic_search.gif) no-repeat 0 0;
-}
-
-.log_etc .reN_delivery a {
-    width: 30px;
-    height: 30px;
-    display: block;
-    text-indent: -9999px;
-    background: url(../../../static/images/ic_search.gif) no-repeat 0 0;
-}
-
-.log_etc .reN_fav a {
-    width: 30px;
-    height: 30px;
-    display: block;
-    text-indent: -9999px;
-    background: url(../../../static/images/ic_search.gif) no-repeat 0 0;
-}
-a {
-    color: #666;
-    text-decoration: none;
-}
-a:hover, a:active, a:focus, a:visited {
-    text-decoration: none;
-    color: inherit;
-}
-.clearfix {
+.log_etc {
     display: block;
     min-height: 1px;
+    
+    a {
+        width: 30px;
+        height: 30px;
+        display: block;
+        text-indent: -9999px;
+    }
+
+    li {
+        float: left;
+        margin-left: 20px;
+    
+        li:first-child {
+            margin-left: 0;
+        }
+    }
+
+    .reN_barkete a {
+        background: url(../../../static/images/ic_barket.png) no-repeat 0 0;
+    }
+
+    .reN_delivery a {
+        background: url(../../../static/images/ic_delivery.png) no-repeat 0 0;
+    }
+
+    .reN_fav a {
+        background: url(../../../static/images/ic_mypage.png) no-repeat 0 0;
+    }
 }
