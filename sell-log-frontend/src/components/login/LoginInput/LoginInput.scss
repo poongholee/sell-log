@@ -1,0 +1,46 @@
+.logN_box {
+    position: relative;
+    margin-bottom: 8px;
+    .valueTxt {
+        display: block;
+        padding: 15px;
+        width: 100%;
+        font-size: 18px;
+        color: #888;
+        border: 1px solid #888;
+    }
+    .logN_del {
+        width: 28px;
+        height: 28px;
+        display: block;
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        margin-top: -14px;
+        background: url(https://www.amorepacificmall.com/reN_apmallPC/images//renew/common/login_del.gif) no-repeat 0 0;
+        text-indent: -99999px;
+    }
+    .logN_pass {
+        width: 28px;
+        height: 28px;
+        display: block;
+        position: absolute;
+        right: 8px;
+        top: 50%;
+        margin-top: -14px;
+        background: url(https://www.amorepacificmall.com/reN_apmallPC/images/renew/common/login_pass.gif) no-repeat 0 0;
+        text-indent: -99999px;
+    }
+}
+
+.btnReg {
+    margin-bottom: 15px;
+    width: 100%;
+    height: 55px;
+    line-height: 54px;
+    font-size: 17px;
+    color: #fff;
+    border: 1px solid #957fdb;
+    background-color: #7052ce;
+    text-align: center;
+}

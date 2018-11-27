@@ -1,0 +1,18 @@
+.login_form {
+    width: 480px;
+    margin: 0 auto;
+    padding-bottom: 50px;
+    
+    * {
+        box-sizing: border-box;
+        font-family: 'roboto','맑은 고딕','Malgun Gothic',dotum, '돋움', gulim, '굴림', Georgia, helvetica, sans-serif, Arial, verdana;
+    }
+
+    h2 {
+        padding: 35px 0 30px;
+        font-size: 40px;
+        color: #000;
+        text-align: center;
+    }
+ 
+}
