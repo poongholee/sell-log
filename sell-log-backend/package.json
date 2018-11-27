@@ -5,6 +5,7 @@
   "license": "MIT",
   "dependencies": {
     "koa": "^2.6.2",
+    "koa-router": "^7.4.0",
     "nodemon": "^1.18.7"
   },
   "devDependencies": {
