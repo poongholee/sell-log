@@ -1,9 +1,8 @@
 import React, { Component } from 'react';
-import PageTemplate from '../../base/PageTemplate';
-import MainHead from '../../main/MainHead';
-import MainFooter from '../../main/MainFooter';
-import LoginForm from '../../login/LoginContainer';
-import Register from '../../register/RegisterContainer';
+import PageTemplate from 'components/base/PageTemplate';
+import MainHead from 'components/main/MainHead';
+import MainFooter from 'components//main/MainFooter';
+import Register from 'components//register/RegisterContainer';
 
 class Home extends Component { 
     render() {

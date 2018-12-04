@@ -1,0 +1,21 @@
+.title-bar {
+    display: block;
+    background: #5a57bf;
+    transition: all .4s;
+    border-bottom: none;
+    font-size: 0;
+    line-height: 0;
+    text-align: center;
+    padding-top: 1rem;
+    padding-bottom: 1rem;
+
+    img {
+        height: 4rem;
+        width: 4rem;
+    }
+}
+
+.title-bar:hover {
+    background-color: #816bff;
+}
+

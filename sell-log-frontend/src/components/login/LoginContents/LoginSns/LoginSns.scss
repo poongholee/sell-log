@@ -1,0 +1,49 @@
+.sns-buttons {
+    display: flex;
+
+    .btn {
+        flex: 1;
+        margin-top: 1rem;
+        text-align: center;
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        background: #fff;
+        font-size: 1.2rem;
+        font-weight: 600;
+        border-radius: 2px;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    .facebook {
+        border: 2px solid #1b6ec2;
+        color: #1b6ec2;
+        
+    }
+    .facebook:hover {
+        background-color: #1b6ec2;
+        color: white;
+    }
+
+    .google {
+        border: 2px solid #e03131;
+        color: #e03131;
+        margin-left: 1rem;
+    }
+
+    .google:hover {
+        background-color: #e03131;
+        color: white;
+    }
+
+    .twitter {
+        border: 2px solid #22b8cf;
+        color: #22b8cf;
+        margin-left: 1rem;
+    }
+
+    .twitter:hover {
+        background-color: #22b8cf;
+        color: white;
+    }
+}
