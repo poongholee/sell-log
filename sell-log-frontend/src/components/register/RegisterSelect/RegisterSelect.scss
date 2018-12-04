@@ -1,0 +1,100 @@
+.contents {
+    background: #fff;
+    padding: 2rem;
+
+    .section {
+        box-sizing: border-box;
+        .label {
+            font-size: 1.25rem;
+            font-weight: 600;
+            color: black;
+        }
+
+        .form {
+            padding-top: 1rem;
+
+            .description {
+                font-size: 1rem;
+                margin-bottom: .5rem;
+                color: #495057;
+            }
+            input {
+                width: 100%;
+                font-size: 1.2rem;
+                padding: .875rem .5rem;
+                border: 1px solid #ced4da;
+                border-radius: 2px;
+            }
+            
+            .password {
+                margin-top: 1rem;
+            }
+
+            .password_check {
+                margin-top: 1rem;
+            }
+        }
+
+        .button {
+            margin-top: 1rem;
+            text-align: center;
+            padding-top: 1rem;
+            padding-bottom: 1rem;
+            background: #6a62d4;
+            color: #fff;
+            font-size: 1.2rem;
+            font-weight: 600;
+            border-radius: 2px;
+            cursor: pointer;
+            user-select: none;
+        }
+
+        .button:hover {
+            background-color: #816bff;
+        }
+
+
+        .text-links {
+            margin-top: 1rem;
+            height: 1.5rem;
+
+            .password-search {
+                float: left;
+
+                a {
+                    text-decoration: underline;
+                    color: #495057;
+                    cursor: pointer;
+                }
+            }
+
+            .register {
+                float: right;
+
+                a {
+                    text-decoration: underline;
+                    color: #495057;
+                    cursor: pointer;
+                }
+
+                span {
+                    color: #868e96;
+                    margin-right: 0.4rem;
+                }
+            }
+        }
+
+        .divider {
+            display: block;
+            text-align: center;
+            overflow: hidden;
+            white-space: nowrap;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;   
+        }
+
+
+
+        
+    }
+}

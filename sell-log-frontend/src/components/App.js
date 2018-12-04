@@ -1,7 +1,9 @@
 import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import { Helmet } from 'react-helmet';
-import Home from './pages/Home';
+import Home from 'pages/Home';
+import Auth from 'pages/Auth/Login';
+import Register from 'pages/Auth/Register';
 
 class App extends Component {
   render() {
@@ -16,6 +18,8 @@ class App extends Component {
         </Helmet>
         <Switch>
           <Route exact path="/" component={Home}></Route>
+          <Route exact path="/auth" component={Auth}></Route>
+          <Route exact path="/auth/register" component={Register}></Route>
         </Switch>
       </React.Fragment>
     )

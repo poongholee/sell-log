@@ -1,2 +1,2 @@
 // @flow
-export { default } from './LoginContainer';
+export { default } from './Login';
