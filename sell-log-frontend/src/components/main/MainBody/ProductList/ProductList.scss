@@ -1,0 +1,8 @@
+@media screen and (max-height: 800px) {
+  .productListSection {
+    overflow-x: auto;
+    .productListInner {
+      white-space: nowrap;
+    }
+  }
+}
