@@ -9,10 +9,30 @@ exports.signUp = async (ctx) => {
     });
 
     try {
-        await user.save(user);
+        await user.save();
 
         ctx.body = user;
     } catch (e) {
         ctx.throw(e, 500);
     }
 };
+
+exports.login = async (ctx) => {
+    const { email, password } = ctx.request.body;
+
+    try {
+        const user = await User.findOne({
+            email: email,
+            password: password
+        }).exec();
+
+        if(!user) {
+            ctx.status = 404;
+            return;
+        }
+
+        ctx.body = user;
+    } catch (e) {
+        ctx.throw(e, 500);
+    }
+}
