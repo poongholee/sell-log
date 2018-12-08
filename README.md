@@ -52,5 +52,5 @@ $ npm install
 
 3. Start dev API server with Koa
 ```
-$ npm start:dev
+$ npm start:dev / yarn start:dev
 ```

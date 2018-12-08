@@ -1,20 +1,18 @@
-const User = require('../../models/User');
+const User = require('models/User');
 
-exports.signUp = (ctx, next) => {
-    ctx.callbackWaitsForEmptyEventLoop = false;
-    console.log(ctx.request.body);
+exports.signUp = async (ctx) => {
     const { email, password, name } = ctx.request.body;
+    const user = new User({
+        email: email,
+        password: password,
+        name: name
+    });
 
-    connect().then(
-        () => {
-            const user = new User({ email: email, password: password, name: name });
-            user.save(async (err, user) => {
-                if (err) { return next(err); }
+    try {
+        await user.save(user);
 
-                ctx.body = user;
-
-                return next();
-            });
-        }
-    );
+        ctx.body = user;
+    } catch (e) {
+        ctx.throw(e, 500);
+    }
 };

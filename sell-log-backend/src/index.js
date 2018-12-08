@@ -5,7 +5,7 @@ const Koa = require('koa');
 const Router = require('koa-router');
 const bodyParser = require('koa-bodyparser');
 
-const api = require('./api');
+const api = require('api');
 
 const {
     PORT: port = 4000,
