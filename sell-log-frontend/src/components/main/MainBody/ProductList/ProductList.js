@@ -1,5 +1,5 @@
 import React, { Component } from "react";
-import Product from "./Product.js";
+import Product from "../Product";
 import "./ProductList.scss";
 
 class ProductList extends Component {
@@ -68,7 +68,7 @@ class ProductList extends Component {
   render() {
     return (
       <div className="productListSection">
-        새로운 상품
+        {this.props.listTitle}
         <div className="productListInner">
           {this.state.products ? this._renderProduct() : "Loading"}
         </div>
