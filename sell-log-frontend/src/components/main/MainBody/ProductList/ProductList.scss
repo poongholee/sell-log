@@ -1,6 +1,11 @@
+.productListSection {
+  width: 100%;
+}
+
 @media screen and (max-height: 800px) {
   .productListSection {
     overflow-x: auto;
+    padding: 10px;
     .productListInner {
       white-space: nowrap;
     }
