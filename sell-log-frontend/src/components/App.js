@@ -1,10 +1,13 @@
-import React, { Component } from "react";
-import { Route, Switch } from "react-router-dom";
-import { Helmet } from "react-helmet";
-import Home from "pages/Home";
-import Auth from "pages/Auth/Login";
-import Register from "pages/Auth/Register";
-import Product from "pages/Product";
+import React, { Component } from 'react';
+import { Route, Switch } from 'react-router-dom';
+import { Helmet } from 'react-helmet';
+import Home from 'pages/Home';
+import Auth from 'pages/Auth/Login';
+import Register from 'pages/Auth/Register';
+import UserInfo from 'pages/MyPage/UserInfo';
+import UserBasket from 'pages/MyPage/UserBasket';
+import UserCoupon from 'pages/MyPage/UserCoupon';
+import Product from 'pages/Product';
 
 class App extends Component {
   render() {
@@ -22,6 +25,9 @@ class App extends Component {
           <Route exact path="/auth" component={Auth} />
           <Route exact path="/auth/register" component={Register} />
           <Route exact path="/product" component={Product} />
+          <Route exact path="/mypage/userInfo" component={UserInfo}/>
+          <Route exact path="/mypage/userBasket" component={UserBasket}/>
+          <Route exact path="/mypage/userCoupon" component={UserCoupon}/>
         </Switch>
       </React.Fragment>
     );

@@ -1,0 +1,131 @@
+.contents {
+    padding-bottom: 2rem;
+    padding-left: 2rem;
+    padding-right: 2rem;
+
+    .section {
+        padding-top: 1rem;
+        padding-bottom: 1rem;
+        display: table;
+        width: 100%;
+
+        .section_name {
+            font-weight: 300;
+            color: #212529;
+            font-size: 1.75rem;
+            padding-bottom: .25rem;
+            margin-bottom: 1.5rem;
+        }
+
+        .section-content {
+
+            .row:first-child {
+                margin-top: 0;
+            }
+
+            .row {
+                display: table;
+                width: 100%;
+                margin-top: 1.5rem;
+
+                .name {
+                    display: table-cell;
+                    font-size: 1.25rem;
+                    color: #868e96;
+                    font-weight: 300;
+                    width: 8rem;
+                    vertical-align: middle;
+                }
+                .row-content {
+                    display: table-cell;
+
+                    .input {
+                        padding: .25rem;
+                        font-size: 1.15rem;
+                        border: 1px solid #ced4da;
+                        width: 10rem;
+                    }
+
+                    .gender-options {
+                        cursor: pointer;
+                        display: table;
+
+                        .option:first-child {
+                            padding-left: 0;
+                        }
+
+                        .option {
+                            display: table-cell;
+                            padding-left: 1rem;
+
+                            .radio-btn {
+                                display: table-cell;
+                                vertical-align: middle;
+
+                                .radio-button {
+                                    display: table-cell;
+                                    width: 1.5rem;
+                                    height: 1.5rem;
+                                    background-size: contain;
+                                    background-position: 50%;
+                                    background-repeat: no-repeat;
+                                    position: relative;
+                                    background-image: url(https://static.laftel.net/static/2.0/media/radio_off.c2ecc273.png);
+                                    display: inline-block;
+                                    cursor: pointer;             
+                                }
+
+                                .selected {
+                                    background-image: url(https://static.laftel.net/static/2.0/media/radio_on.b9c3dbaa.png);
+                                }   
+                            }
+                            .radio-name {
+                                padding-left: .5rem;
+                                color: #495057;
+                                display: table-cell;
+                                vertical-align: middle;
+                                font-size: 1.15rem;
+                            }
+                        }
+                    }
+
+                    .phone {
+                        display: table;
+                        .block {
+                            vertical-align: middle;
+                            font-size: 1rem;
+                            color: #495057;
+                            display: table-cell;
+                        }
+
+                        .button-wrapper {
+                            padding-left: .5rem;
+                            display: table-cell;
+
+                            .button {
+                                color: black;
+                                background-color: white;
+                                font-weight: 600;
+                                padding: .5rem;
+                                font-size: 1.15rem;
+                                border: 1px solid #adb5bd;
+                                cursor: pointer;
+                            }
+                        }
+                    }
+
+                    .lined-text {
+                        font-weight: 600;
+                        color: #343a40;
+                        font-size: 1.15rem;
+                        display: inline-block;
+                        padding-bottom: .15rem;
+                        border-bottom: 2px solid #343a40;
+                        cursor: pointer;
+                    }
+                }
+            }
+            
+        }
+    }
+}

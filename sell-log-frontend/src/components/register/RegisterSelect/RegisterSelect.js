@@ -13,7 +13,7 @@ class RegisterSelect extends Component {
                     </div>
                     <div className="form">
                         <div className="button" onClick={this.props.handleRegisterType}>회원가입</div>
-                    </div>
+                    </div> 
                     <div className="divider"></div>
                     <LoginSns/>
                     <div className="text-links">
