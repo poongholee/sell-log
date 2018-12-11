@@ -1,9 +1,10 @@
-import React, { Component } from 'react';
-import { Route, Switch } from 'react-router-dom';
-import { Helmet } from 'react-helmet';
-import Home from 'pages/Home';
-import Auth from 'pages/Auth/Login';
-import Register from 'pages/Auth/Register';
+import React, { Component } from "react";
+import { Route, Switch } from "react-router-dom";
+import { Helmet } from "react-helmet";
+import Home from "pages/Home";
+import Auth from "pages/Auth/Login";
+import Register from "pages/Auth/Register";
+import Product from "pages/Product";
 
 class App extends Component {
   render() {
@@ -17,13 +18,14 @@ class App extends Component {
           />
         </Helmet>
         <Switch>
-          <Route exact path="/" component={Home}></Route>
-          <Route exact path="/auth" component={Auth}></Route>
-          <Route exact path="/auth/register" component={Register}></Route>
+          <Route exact path="/" component={Home} />
+          <Route exact path="/auth" component={Auth} />
+          <Route exact path="/auth/register" component={Register} />
+          <Route exact path="/product" component={Product} />
         </Switch>
       </React.Fragment>
-    )
-  };
+    );
+  }
 }
 
 export default App;

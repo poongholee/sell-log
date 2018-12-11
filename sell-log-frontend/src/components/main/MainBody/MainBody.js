@@ -6,7 +6,7 @@ class MainBody extends Component {
   render() {
     return (
       <div className="MainBody">
-        <ProductList />
+        <ProductList listTitle="인기 또는 새로운 상품" />
       </div>
     );
   }
