@@ -6,8 +6,8 @@ const ProductSchema = new Schema({
     name: { type: String, required: true },
     description: { type: String },
     price: { type: Number, required: true },
-    discountRate: { type: Number, required: true },
-    imageUrl: { type: String, required: true },
+    discountRate: { type: Number, required: true, default: 0 },
+    imageUrl: { type: String, required: true, default: '' },
     createdAt: { type: Date, default: new Date() }
 });
 
