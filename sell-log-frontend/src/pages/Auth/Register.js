@@ -3,7 +3,6 @@ import PageTemplate from 'components/base/PageTemplate';
 import RegisterContainer from 'components/register/RegisterContainer';
 
 class Register extends Component {
-
     render() {
         return (
             <PageTemplate>
