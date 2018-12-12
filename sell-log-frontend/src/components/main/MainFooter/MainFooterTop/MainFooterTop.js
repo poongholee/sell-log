@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
-import './MainFooterTop.scss';
-import './Footer.css';
 import ListMenu from './ListMenu';
+import './MainFooterTop.scss';
 
 class MainFooterTop extends Component {
 
@@ -9,7 +8,7 @@ class MainFooterTop extends Component {
         super(props);
 
         this.state = {
-            listMenu : [
+            listMenu: [
                 "회사소개",
                 "채용안내",
                 "가맹점 개설문의",
@@ -24,8 +23,8 @@ class MainFooterTop extends Component {
         // map으로 컴포넌트 매핑
         const mapToComponent = (listMenu) => {
             return listMenu.map((item, index) => {
-                return (<ListMenu item={item} key={index}/>);
-            })         
+                return (<ListMenu item={item} key={index} />);
+            })
         }
 
         return (

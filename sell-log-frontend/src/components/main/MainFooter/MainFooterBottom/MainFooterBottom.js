@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import './Footer.css';
 import ListSns from './ListSns';
+import './MainFooterBottom.scss';
 
 class MainFooterBottom extends Component {
 

@@ -1,0 +1,49 @@
+.threeConts {
+    border-top: 1px solid #e5e5e5;
+    background: #f9f9f9;
+
+    .conts {
+        overflow: hidden;
+        height: 40px;
+        width: 1020px;
+        margin: 0 auto;
+    }
+}
+
+.copyright {
+    float: left;
+    padding: 11px 0 0;
+    color: #888;
+    font-size: 11px;
+    line-height: 18px;
+    font-weight: 700;
+}
+
+
+.sns {
+    overflow: hidden;
+    float: right;
+    padding: 9px 0 0;
+
+    h2 {
+        float: left;
+        margin-right: 4px;
+        color: #aaa;
+        font-size: 12px;
+        padding: 3px 0 0;
+    }
+    
+    a {
+        float: left;
+        margin: 0 8px;
+        font-size: 0;
+        line-height: 0;
+        vertical-align: top;
+
+        img{
+            border: 0;
+            vertical-align: top;
+            color: #666;
+        }
+    }
+}

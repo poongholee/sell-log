@@ -1,0 +1,56 @@
+.fourConts {
+    .conts {
+        border-top: 1px solid #ddd;
+        text-align: center;
+    }
+
+    ol {
+        li {
+            display: inline-block;
+            font-family: 'montserrat', 'noto', 'Roboto', sans-serif;
+            color: #777;
+            font-size: 11px;
+            line-height: 53px;
+            list-style: none;
+
+            .isms:before {
+                content: '';
+                display: inline-block;
+                vertical-align: middle;
+                width: 26px;
+                height: 26px;
+                background: url(http://www.oliveyoung.co.kr/pc-static-root/image/common/foot_isms.png) no-repeat 0 0;
+                margin: 0 7px 1px 0;
+            }
+
+            .bar:before {
+                content: '|';
+                display: inline-block;
+                margin: 0 5px;
+                font-family: 'montserrat', 'noto', 'Roboto', sans-serif;
+                color: #777;
+                font-size: 11px;
+            }
+
+            .ncsi:before {
+                content: '';
+                display: inline-block;
+                vertical-align: middle;
+                width: 30px;
+                height: 20px;
+                background: url(http://www.oliveyoung.co.kr/pc-static-root/image/common/foot_ncsi.png) no-repeat 0 0;
+                margin: 0 7px 2px 0;
+            }
+
+            .ncsi {
+                margin-left: 28px;
+            }
+        }
+
+        :after {
+            content: '';
+            display: block;
+            clear: both;
+        }
+    }
+}
