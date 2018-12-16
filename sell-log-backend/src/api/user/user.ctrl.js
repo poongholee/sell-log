@@ -47,14 +47,13 @@ exports.signUp = async (ctx) => {
 exports.login = async (ctx) => {
     const { email, password } = ctx.request.body;
 
+
     try {
         const user = await User.findOne({
             email: email
         }).exec();
 
-        const isValidatePassword = user.password === user.validateHash(password);
-        
-        if (!user || isValidatePassword) {
+        if (!user || !user.validateHash(password)) {
             ctx.status = 404;
             return;
         }
@@ -73,7 +72,7 @@ exports.login = async (ctx) => {
 exports.remove = async (ctx) => {
     const { _id } = ctx.session.user._id;
     try {
-        const user = User.findOne({ _id: id }).exec();
+        const user = User.findOne({ _id: _id }).exec();
 
         if (!user) {
             ctx.status = 400;
@@ -86,10 +85,11 @@ exports.remove = async (ctx) => {
 
         await User.remove({ _id: _id }).exec();
 
+        ctx.session = [];
         ctx.status = 200;
         ctx.body = {
             success: true,
-            message: "Deleted All Users"
+            message: "User is removed"
         }
     } catch (e) {
         ctx.throw(e, 500);
