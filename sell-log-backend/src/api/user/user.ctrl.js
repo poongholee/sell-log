@@ -1,8 +1,6 @@
 const User = require('models/User');
 
-const REGEX_USERNAME = /^[a-z0-9]+$/;
-
-const signUpValidateCheck = ((name, password) => {
+const signUpValidateCheck = ((password) => {
     if (password.length < 4 || typeof password !== "string") {
         return {
             status: 400,
@@ -20,7 +18,7 @@ const signUpValidateCheck = ((name, password) => {
 exports.signUp = async (ctx) => {
     const { email, password, name } = ctx.request.body;
 
-    const result = signUpValidateCheck(name, password);
+    const result = signUpValidateCheck(password);
 
     if (result.status !== 200) {
         ctx.status = result.status;
@@ -54,7 +52,9 @@ exports.login = async (ctx) => {
             email: email
         }).exec();
 
-        if (!user || user.validateHash(password)) {
+        const isValidatePassword = user.password === user.validateHash(password);
+        
+        if (!user || isValidatePassword) {
             ctx.status = 404;
             return;
         }
@@ -65,6 +65,32 @@ exports.login = async (ctx) => {
         }
 
         ctx.body = user;
+    } catch (e) {
+        ctx.throw(e, 500);
+    }
+}
+
+exports.remove = async (ctx) => {
+    const { _id } = ctx.session.user._id;
+    try {
+        const user = User.findOne({ _id: id }).exec();
+
+        if (!user) {
+            ctx.status = 400;
+            ctx.body = {
+                error: 'User does not exists'
+            }
+
+            return;
+        }
+
+        await User.remove({ _id: _id }).exec();
+
+        ctx.status = 200;
+        ctx.body = {
+            success: true,
+            message: "Deleted All Users"
+        }
     } catch (e) {
         ctx.throw(e, 500);
     }

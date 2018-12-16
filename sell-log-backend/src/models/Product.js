@@ -8,7 +8,7 @@ const ProductSchema = new Schema({
     price: { type: Number, required: true },
     discountRate: { type: Number, required: true, default: 0 },
     imageUrl: { type: String, required: true, default: '' },
-    createdAt: { type: Date, default: new Date() }
+    createdAt: { type: Date, default: Date.now }
 });
 
 global.Product = global.Product || mongoose.model('Product', ProductSchema);
