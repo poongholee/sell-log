@@ -19,7 +19,10 @@ class Product extends Component {
           </div>
         </div>
         <div className="product-join">
-          <ProductJoin numberTotal="10" />
+          <ProductJoin
+            numberTotal={this.props.numberTotal}
+            numberJoin={this.props.numberJoin}
+          />
         </div>
       </div>
     );
