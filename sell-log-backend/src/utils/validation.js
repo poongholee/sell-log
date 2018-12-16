@@ -10,3 +10,12 @@ exports.checkObjectId = (ctx, next) => {
 
     return next();
 }
+
+exports.checkLogin = (ctx, next) => {
+    if(!ctx.session.user) {
+        ctx.status = 401;
+        return null;
+    }
+
+    return next();
+}

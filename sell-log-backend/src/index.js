@@ -5,6 +5,7 @@ const Koa = require('koa');
 const Router = require('koa-router');
 const bodyParser = require('koa-bodyparser');
 const session = require('koa-session');
+const serve = require('koa-static');
 
 const api = require('api');
 
@@ -39,11 +40,11 @@ router.use('/api', api.routes());
 
 app.keys = [SECURED_KEY];
 
-app.use(session(SESSION, app));
-
-app.use(bodyParser());
-
-app.use(router.routes()).use(router.allowedMethods());
+app.use(session(SESSION, app))
+    .use(bodyParser())
+    .use(serve('./public'))
+    .use(router.routes())
+    .use(router.allowedMethods());
 
 app.listen(port, () => {
     console.log('listening to port', port);

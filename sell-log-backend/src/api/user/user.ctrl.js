@@ -85,7 +85,7 @@ exports.remove = async (ctx) => {
 
         await User.remove({ _id: _id }).exec();
 
-        ctx.session = [];
+        ctx.session = null;
         ctx.status = 200;
         ctx.body = {
             success: true,
@@ -94,4 +94,9 @@ exports.remove = async (ctx) => {
     } catch (e) {
         ctx.throw(e, 500);
     }
+}
+
+exports.logout = (ctx) => {
+    ctx.session = null;
+    ctx.status = 204;
 }
