@@ -14,37 +14,48 @@ class ProductList extends Component {
           image:
             "https://laftelimage.blob.core.windows.net/items/thumbs/large/abb669f5-2360-4062-839e-0762155bad7c.jpg",
           title: "벨제붑 아가씨",
-          price: 10000
+          price: 10000,
+          numberTotal: 10,
+          numberJoin: 1
         },
         {
           image:
             "https://laftelimage.blob.core.windows.net/items/thumbs/large/c49a6485-e6e9-4a25-b7fe-378d0662f6b2.jpg",
           title: "전생했더니 슬라임",
-          price: 15000
+          price: 15000,
+          numberTotal: 10,
+          numberJoin: 1
         },
         {
           image:
             "https://laftelimage.blob.core.windows.net/items/thumbs/large/abb669f5-2360-4062-839e-0762155bad7c.jpg",
           title: "벨제붑 아가씨",
-          price: 10000
+          price: 10000,
+          numberTotal: 30,
+          numberJoin: 1
         },
         {
           image:
             "https://laftelimage.blob.core.windows.net/items/thumbs/large/c49a6485-e6e9-4a25-b7fe-378d0662f6b2.jpg",
           title: "전생했더니 슬라임",
-          price: 15000
+          price: 15000,
+          numberTotal: 20,
+          numberJoin: 1
         },
         {
           image:
             "https://laftelimage.blob.core.windows.net/items/thumbs/large/abb669f5-2360-4062-839e-0762155bad7c.jpg",
           title: "벨제붑 아가씨",
-          price: 10000
+          price: 10000,
+          numberTotal: 10,
+          numberJoin: 3
         },
         {
           image:
             "https://laftelimage.blob.core.windows.net/items/thumbs/large/c49a6485-e6e9-4a25-b7fe-378d0662f6b2.jpg",
           title: "전생했더니 슬라임",
-          price: 15000
+          price: 15000,
+          numberJoin: 2
         }
       ]
     });
@@ -57,7 +68,9 @@ class ProductList extends Component {
             image={product.image}
             title={product.title}
             price={product.price}
-            key={product.index}
+            index={product.index}
+            numberTotal={product.numberTotal}
+            numberJoin={product.numberJoin}
           />
         );
       }
