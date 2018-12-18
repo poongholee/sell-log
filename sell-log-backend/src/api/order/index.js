@@ -6,5 +6,6 @@ const order = new Router();
 
 order.get('/', orderCtrl.list);
 order.get('/user', validation.checkLogin, validation.checkObjectId, orderCtrl.read);
+order.post('/', validation.checkLogin, validation.checkObjectId, orderCtrl.write);
 
 module.exports = order;
