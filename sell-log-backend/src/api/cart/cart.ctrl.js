@@ -1,4 +1,36 @@
 const Cart = require('models/Cart');
+const Joi = require('joi');
+const SessionStorage = require('storage/SessionStorage')
+
+const schema = Joi.object().keys({
+    userId: Joi.string().required(),
+    productId: Joi.string().required()
+});
+
+exports.write = async (ctx) => {
+    const result = Joi.validate(ctx.request.body, schema);
+
+    if (result.error) {
+
+        ctx.status = 400;
+        ctx.body = result.error;
+        return;
+    }
+
+    const { userId, productId } = ctx.request.body;
+
+    const cart = new Cart({
+        userId: userId,
+        productId: productId
+    });
+
+    try {
+        await cart.save();
+        ctx.body = cart;
+    } catch (e) {
+        ctx.throw(e, 500);
+    }
+}
 
 exports.list = async (ctx) => {
     try {
@@ -10,7 +42,7 @@ exports.list = async (ctx) => {
 }
 
 exports.read = async (ctx) => {
-    const { userId } = ctx.params;
+    const userId = SessionStorage.getSessionUserId(ctx);
 
     try {
         const cart = await Cart.find({ userId: userId }).exec();
@@ -25,3 +57,4 @@ exports.read = async (ctx) => {
         ctx.throw(e, 500);
     }
 }
+

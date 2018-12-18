@@ -8,5 +8,5 @@ const CartSchema = new Schema({
     createdAt: { type: Date, default: Date.now }
 });
 
-global.Cart = global.Car || mongoose.model('Cart', CartSchema);
+global.Cart = global.Cart || mongoose.model('Cart', CartSchema);
 module.exports = global.Cart;

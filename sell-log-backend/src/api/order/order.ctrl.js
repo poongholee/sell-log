@@ -10,7 +10,7 @@ exports.list = async (ctx) => {
 }
 
 exports.read = async (ctx) => {
-    const { userId } = ctx.params;
+    const userId = SessionStorage.getSessionUserId(ctx);
 
     try {
         const order = await Order.find({ userid: userId }).exec();
