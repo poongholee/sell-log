@@ -7,57 +7,17 @@ class ProductList extends Component {
   componentDidMount() {
     this._getProduct();
   }
+  _callApi = () => {
+    return fetch("http://192.168.43.231:4000/api/product", {
+      method: "get"
+    })
+      .then(response => response.json())
+      .then(this.state.products);
+  };
   _getProduct = async () => {
+    const products = await this._callApi();
     this.setState({
-      products: [
-        {
-          image:
-            "https://laftelimage.blob.core.windows.net/items/thumbs/large/abb669f5-2360-4062-839e-0762155bad7c.jpg",
-          title: "벨제붑 아가씨",
-          price: 10000,
-          numberTotal: 10,
-          numberJoin: 1
-        },
-        {
-          image:
-            "https://laftelimage.blob.core.windows.net/items/thumbs/large/c49a6485-e6e9-4a25-b7fe-378d0662f6b2.jpg",
-          title: "전생했더니 슬라임",
-          price: 15000,
-          numberTotal: 10,
-          numberJoin: 1
-        },
-        {
-          image:
-            "https://laftelimage.blob.core.windows.net/items/thumbs/large/abb669f5-2360-4062-839e-0762155bad7c.jpg",
-          title: "벨제붑 아가씨",
-          price: 10000,
-          numberTotal: 30,
-          numberJoin: 1
-        },
-        {
-          image:
-            "https://laftelimage.blob.core.windows.net/items/thumbs/large/c49a6485-e6e9-4a25-b7fe-378d0662f6b2.jpg",
-          title: "전생했더니 슬라임",
-          price: 15000,
-          numberTotal: 20,
-          numberJoin: 1
-        },
-        {
-          image:
-            "https://laftelimage.blob.core.windows.net/items/thumbs/large/abb669f5-2360-4062-839e-0762155bad7c.jpg",
-          title: "벨제붑 아가씨",
-          price: 10000,
-          numberTotal: 10,
-          numberJoin: 3
-        },
-        {
-          image:
-            "https://laftelimage.blob.core.windows.net/items/thumbs/large/c49a6485-e6e9-4a25-b7fe-378d0662f6b2.jpg",
-          title: "전생했더니 슬라임",
-          price: 15000,
-          numberJoin: 2
-        }
-      ]
+      products
     });
   };
   _renderProduct = () => {
@@ -65,12 +25,12 @@ class ProductList extends Component {
       if (index < 5) {
         return (
           <Product
-            image={product.image}
-            title={product.title}
+            _id={product._id}
+            thumbnailUrl={product.thumbnailUrl}
+            name={product.name}
             price={product.price}
-            index={product.index}
-            numberTotal={product.numberTotal}
-            numberJoin={product.numberJoin}
+            discountRate={product.discountRate}
+            minCount={product.minCount}
           />
         );
       }

@@ -9,7 +9,7 @@ class Product extends Component {
       <PageTemplate>
         <div>
           <MainHead />
-          <ProductBody />
+          <ProductBody id={this.props.match.params.id} />
         </div>
       </PageTemplate>
     );

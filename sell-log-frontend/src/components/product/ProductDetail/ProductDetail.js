@@ -11,8 +11,8 @@ class ProductDetail extends Component {
           <div className="detail-box">
             <img
               className="detail-image-content"
-              src={this.props.detailImages}
-              alt={this.props.title}
+              src={this.props.detailUrl}
+              alt={this.props.name}
             />
           </div>
           <div className="detail-box">
