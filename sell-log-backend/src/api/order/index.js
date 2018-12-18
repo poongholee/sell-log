@@ -5,6 +5,6 @@ const orderCtrl = require('./order.ctrl');
 const order = new Router();
 
 order.get('/', orderCtrl.list);
-order.get('/:id', validation.checkObjectId, orderCtrl.read);
+order.get('/:userId', validation.checkObjectId, orderCtrl.read);
 
 module.exports = order;

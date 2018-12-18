@@ -3,8 +3,8 @@ const mongoose = require('mongoose');
 const { Schema } = mongoose;
 
 const OrderSchema = new Schema({
-    user: { type: Schema.Types.ObjectId, ref: 'User' },
-    product: { type: Schema.Types.ObjectId, ref: 'Product' },
+    userId: { type: Schema.Types.ObjectId, ref: 'User' },
+    productId: { type: Schema.Types.ObjectId, ref: 'Product' },
     createdAt: { type: Date, default: Date.now }
 });
 
