@@ -18,7 +18,10 @@ class ProductBodyTop extends Component {
         <div className="product-body-content">
           <section>
             <div className="thumbnail">
-              <img className="thumbnail-content" src={this.props.titleImage} />
+              <img
+                className="thumbnail-content"
+                src={this.props.thumbnailUrl}
+              />
               <div className="item-action-buttons">
                 <div className="action-button"> 좋아요 </div>
                 <div className="action-button" onClick={this.onCart}>

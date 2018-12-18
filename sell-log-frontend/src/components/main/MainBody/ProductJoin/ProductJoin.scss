@@ -1,6 +1,11 @@
 .product-join-content {
   background: #816bff;
   color: #fff;
-  text-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  display: flex;
+  height: 2.5rem;
   padding: 2.5px;
 }

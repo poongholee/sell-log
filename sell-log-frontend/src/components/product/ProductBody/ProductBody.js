@@ -6,44 +6,40 @@ class ProductBody extends Component {
   componentDidMount() {
     this._getProduct();
   }
+  _callApi = () => {
+    let callUrl = "http://192.168.43.231:4000/api/product/" + this.props.id;
+    console.log(callUrl);
+    return fetch(callUrl, {
+      method: "get"
+    })
+      .then(response => response.json())
+      .then(this.state.product);
+  };
   _getProduct = async () => {
+    const product = await this._callApi();
     this.setState({
-      products: [
-        {
-          title: "전생했더니 슬라임",
-          category: "전자제품",
-          price: 15000,
-          titleImage:
-            "https://laftelimage.blob.core.windows.net/items/thumbs/large/c49a6485-e6e9-4a25-b7fe-378d0662f6b2.jpg",
-          detailImages:
-            "http://ngcp-s3-seoul-img-prd.s3.amazonaws.com/StudioD-BUTTER/FT0418045.jpg",
-          number: 10,
-          minimum: 30
-        }
-      ]
+      product
     });
   };
-  _renderProduct = () => {
-    const products = this.state.products.map((product, index) => {
-      return (
-        <div className="ProductBody">
-          <ProductBodyTop
-            titleImage={product.titleImage}
-            title={product.title}
-            category={product.category}
-            price={product.price}
-          />
-          <ProductBodyDetail
-            detailImages={product.detailImages}
-            title={product.title}
-          />
-        </div>
-      );
-    });
-    return products;
+  _renderProduct = product => {
+    return (
+      <div className="ProductBody">
+        <ProductBodyTop
+          thumbnailUrl={product.thumbnailUrl}
+          name={product.name}
+          description={product.description}
+          price={product.price}
+          discountRate={product.discountRate}
+          minCount={product.minCount}
+        />
+        <ProductBodyDetail detailUrl={product.detailUrl} name={product.name} />
+      </div>
+    );
   };
   _isProduct = () => {
-    return this.state.products ? this._renderProduct() : "Loading";
+    return this.state.product
+      ? this._renderProduct(this.state.product)
+      : "Loading";
   };
   state = {};
   render() {
