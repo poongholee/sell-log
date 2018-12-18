@@ -1,0 +1,174 @@
+.recommendContent {
+    .widget-content {
+        padding-top: 24px;
+
+        .theme-info {
+            margin-bottom: 5rem;
+            .theme-title {
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+
+                .box {
+                    margin-bottom: 2px;
+                    width: 42px;
+                    height: 30px;
+                    background: #fff;
+                    border: 1px solid #816bff;
+                    font-size: .875rem;
+                    font-weight: 700;
+                    color: #816bff;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
+
+                .title {
+                    font-size: 1.5rem;
+                    font-weight: 700;
+                    color: #494c62;
+                    margin-left: .5rem;
+                    flex: 1 1;
+                    text-overflow: ellipsis;
+                    white-space: nowrap;
+                    overflow: hidden;
+                    line-height: 2rem;
+                }
+
+                .more {
+                    color: #797979;
+                    margin-left: auto;
+                    display: flex;
+                    align-items: center;
+                    font-weight: 300;
+                }
+
+            }
+            .description {
+                margin-top: 14px;
+                display: flex;
+                align-items: center;
+                word-break: keep-all;
+                width: 85%;
+
+                .text {
+                    color: #495057;
+                    font-size: 1rem;
+                    opacity: .6; 
+                }
+            }
+
+            .theme-content {
+                margin-top: 24px;
+                display: flex;
+                flex-direction: row;
+
+                .column {
+                    flex: 1 1;
+                    display: flex;
+                    flex-wrap: wrap;
+
+                    .big {
+                        position: relative;
+                        height: 384px;
+                        width: 100%;
+                        cursor: pointer;
+                        background-image: url(https://laftelimage.blob.core.windows.net/items/thumbs/large/b4e03701-0c57-4087-a763-e507c44aabae.jpg);
+                        box-shadow: 0 1.5px 6px rgba(0,0,0,.12), 0 1.5px 4px rgba(0,0,0,.24);
+                        
+                        .layer {
+                            display: flex;
+                            align-items: flex-end;
+                            justify-content: flex-start;
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            top: 0;
+                            bottom: 0;
+                            background-image: linear-gradient(180deg,transparent,rgba(0,0,0,.45));
+                            transition: all .3s ease-in;
+
+                            .item-title {
+                                font-size: 1.5rem;
+                                padding: 1rem;
+                                display: block;
+                                -o-text-overflow: ellipsis;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                font-weight: 500;
+                                color: #fff;
+                                text-decoration: none;
+                            }
+                        }
+                        
+                    
+                    }
+
+                    .mini {
+                        cursor: pointer;
+                        position: relative;
+                        margin-top: 24px;
+                        margin-left: 24px;
+                        height: 180px;
+                        background-position: top;
+                        box-shadow: 0 1.5px 6px rgba(0,0,0,.12), 0 1.5px 4px rgba(0,0,0,.24);
+                        .thumbnail-wrapper {
+                            width: 180px;
+                            height: 180px;
+                            overflow: hidden;
+                            position: relative;
+
+                            .thumbnail {
+                                position: absolute;
+                                top: -4px;
+                                bottom: -4px;
+                                left: -4px;
+                                right: -4px;
+                                background-size: cover;
+                                background-repeat: no-repeat;
+                                background-image: url(https://laftelimage.blob.core.windows.net/items/thumbs/big/c02d8d60-fcb9-42b6-a4cd-6df7944cdfbf.jpg);
+                            }
+                        }
+
+                        .layer {
+                            position: absolute;
+                            left: 0;
+                            right: 0;
+                            bottom: 0;
+                            top: 0;
+                            display: flex;
+                            align-items: flex-end;
+                            justify-content: flex-start;
+                            background-image: linear-gradient(180deg,transparent,rgba(0,0,0,.45));
+                            transition: all .3s ease-in;
+                            .item-title {
+                                font-size: .875rem;
+                                padding: .5rem;
+                                display: block;
+                                text-overflow: ellipsis;
+                                white-space: nowrap;
+                                overflow: hidden;
+                                font-weight: 500;
+                                color: #fff;
+                            }
+                        }
+                    }
+
+                    .mini:nth-child(3n-2) {
+                        margin-left: 0;
+                    }
+
+                    .mini:nth-child(-n+3) {
+                        margin-top: 0;
+                    }
+                }
+
+                .column:nth-child(2) {
+                    margin-left: 24px;
+                }
+            }
+        }
+
+    }
+}
