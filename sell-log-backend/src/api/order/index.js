@@ -5,7 +5,7 @@ const orderCtrl = require('./order.ctrl');
 const order = new Router();
 
 order.get('/', orderCtrl.list);
-order.get('/user', validation.checkLogin, validation.checkObjectId, orderCtrl.read);
-order.post('/', validation.checkLogin, validation.checkObjectId, orderCtrl.write);
+order.get('/user', validation.checkLogin, orderCtrl.read);
+order.post('/', validation.checkLogin, orderCtrl.write);
 
 module.exports = order;
