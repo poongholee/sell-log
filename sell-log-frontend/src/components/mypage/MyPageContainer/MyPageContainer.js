@@ -11,7 +11,7 @@ class MyPageContainer extends Component {
                 <div className="tab">
                     <div className="tab-item active"><Link to="/mypage/userinfo">내 정보</Link></div>
                     <div className="tab-item false"><Link to="/mypage/userbasket">장바구니</Link></div>
-                    <div className="tab-item false"><Link to="/mypage/usercoupon">쿠폰조회</Link></div>
+                    <div className="tab-item false"><Link to="/mypage/usercoupon">공동구매</Link></div>
                 </div>
 
         )

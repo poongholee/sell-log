@@ -4,6 +4,7 @@ import './RegisterSelect.scss';
 import LoginSns from '../../login/LoginContents/LoginSns';
 
 class RegisterSelect extends Component {
+    
     render() {
         return (
             <div className="contents">

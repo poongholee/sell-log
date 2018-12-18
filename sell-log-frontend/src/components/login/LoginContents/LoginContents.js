@@ -13,14 +13,14 @@ class LoginContents extends Component {
                     <div className="form">
                         <div className="input">
                             <div className="description">이메일</div>
-                            <input type="text" name="email" placeholder="이메일 주소"></input>
+                            <input type="text" name="email" placeholder="이메일 주소" onChange={this.props.handleEmailChanged}></input>
                         </div>
                         <div className="input password">
                             <div className="description">비밀번호</div>
-                            <input type="password" name="password" placeholder="비밀번호"></input>
+                            <input type="password" name="password" placeholder="비밀번호" onChange={this.props.handlePasswordChanged}></input>
                         </div>
                     </div>
-                    <div className="button">로그인</div>
+                    <div className="button" onClick={this.props.signIn}>로그인</div>
                     <div className="text-links">
                         <div className="password-search">
                             <Link to="/">비밀번호 찾기</Link>

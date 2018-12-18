@@ -23,6 +23,9 @@
                 margin-top: 0;
             }
 
+            .row+.row { 
+                margin-top: 1.5rem;
+            }
             .row {
                 display: table;
                 width: 100%;
@@ -34,10 +37,63 @@
                     color: #868e96;
                     font-weight: 300;
                     width: 8rem;
-                    vertical-align: middle;
+                    vertical-align: top;
                 }
                 .row-content {
                     display: table-cell;
+
+                    .option-toggle+.option-toggle {
+                        margin-top: .75rem;
+                    }
+
+                    .option-toggle {
+                        display: table;
+
+                        .text {
+                            font-size: 1.25rem;
+                            color: #868e96;
+                            font-weight: 300;
+                            width: 20rem;
+                            display: table-cell;
+                            vertical-align: middle;
+                        }
+
+                        .toggle {
+                            display: table-cell;
+                            vertical-align: middle;
+                            line-height: 0;
+                            font-size: 0;
+
+                            .toggle-switch {
+                                height: 1.75rem;
+                                width: 3.5rem;
+                                position: relative;
+                                display: inline-block;
+                                cursor: pointer;
+
+                                .fill {
+                                    background: #ff6b6b;
+                                    transition: all .15s ease-in-out;
+                                    margin-top: .25rem;
+                                    height: 1.25rem;
+                                    width: 100%;
+                                    background: #dee2e6;
+                                    border-radius: 1rem;
+                                }
+
+                                .circle {
+                                    width: 1.75rem;
+                                    height: 1.75rem;
+                                    border-radius: 100%;
+                                    background: #fff;
+                                    position: absolute;
+                                    top: 0;
+                                    box-shadow: 0 1.5px 4px rgba(0,0,0,.24), 0 1.5px 6px rgba(0,0,0,.12);
+                                    left: 0;
+                                }
+                            }
+                        }
+                    }
 
                     .input {
                         padding: .25rem;
@@ -126,6 +182,45 @@
                 }
             }
             
+        }
+    }
+
+    .footer {
+        padding-top: 3rem;
+        display: table;
+        width: 100%;
+
+        .unregister {
+            display: table-cell;
+            vertical-align: bottom;
+
+            .lined-text {
+                font-weight: 600;
+                color: #343a40;
+                font-size: 1.15rem;
+                display: inline-block;
+                padding-bottom: .15rem;
+                border-bottom: 2px solid #343a40;
+                cursor: pointer;
+            }
+        }
+
+        .save-button-wrapper {
+            display: table-cell;
+            text-align: right;
+
+            button.button {
+                color: #fff;
+                font-size: 1.5rem;
+                line-height: 1.5rem;
+                background: #5a57bf;
+                padding: 1rem 2rem;
+                display: inline-block;
+                border-radius: 3px;
+                cursor: pointer;
+                border: none;
+                outline: none;
+            }
         }
     }
 }

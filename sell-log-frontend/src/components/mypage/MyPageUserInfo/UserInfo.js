@@ -65,7 +65,65 @@ class UserInfo extends Component {
                         <div className="row"></div>
                     </div>
                 </div>
-                <div className="footer"></div>
+                <div className="section">
+                    <div className="section_name">알림</div>
+                    <div className="section-content">
+                        <div className="row">
+                            <div className="name">이메일 수신</div>
+                            <div className="row-content">
+                                <div className="option-toggle">
+                                    <div className="text">셀로그 이벤트 및 업데이트 소식</div>
+                                    <div className="toggle">
+                                        <div className="toggle-switch">
+                                            <div className="fill"></div>
+                                            <div className="circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div className="row">
+                            <div className="name">알림</div>
+                            <div className="row-content">
+                                <div className="option-toggle">
+                                    <div className="text">관심상품 업데이트 알림</div>
+                                    <div className="toggle">
+                                        <div className="toggle-switch">
+                                            <div className="fill"></div>
+                                            <div className="circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="option-toggle">
+                                    <div className="text">공동구매 완료 알림</div>
+                                    <div className="toggle">
+                                        <div className="toggle-switch">
+                                            <div className="fill"></div>
+                                            <div className="circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div className="option-toggle">
+                                    <div className="text">맞춤 할인 및 이벤트 소식</div>
+                                    <div className="toggle">
+                                        <div className="toggle-switch">
+                                            <div className="fill"></div>
+                                            <div className="circle"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div className="footer">
+                    <div className="unregister">
+                        <div className="lined-text">계정 탈퇴</div>
+                    </div>
+                    <div className="save-button-wrapper">
+                        <button class="button">저장</button>
+                    </div>
+                </div>
             </div>
         )
     }
