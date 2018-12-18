@@ -6,7 +6,8 @@ const schema = Joi.object().keys({
     description: Joi.string(),
     price: Joi.number().integer().min(0).required(),
     discountRate: Joi.number().integer().min(0),
-    imageUrl: Joi.string(),
+    thumbnailUrl: Joi.string(),
+    detailUrl: Joi.string(),
     createdAt: Joi.date()
 });
 
@@ -20,14 +21,15 @@ exports.write = async (ctx) => {
         return;
     }
 
-    const { name, description, price, discountRate, imageUrl } = ctx.request.body;
+    const { name, description, price, discountRate, thumbnailUrl, detailUrl } = ctx.request.body;
 
     const product = new Product({
         name: name,
         description: description,
         price: price,
         discountRate: discountRate,
-        imageUrl: imageUrl
+        thumbnailUrl: thumbnailUrl,
+        detailUrl: detailUrl 
     });
 
     try {
