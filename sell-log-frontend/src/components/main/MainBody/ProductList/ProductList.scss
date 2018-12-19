@@ -1,5 +1,33 @@
 .productListSection {
-  width: 100%;
+  margin-bottom: 2rem;
+  .widget-head {
+    display: flex;
+    align-items: center;
+
+    h2 {
+      font-size: 1.5rem;
+      font-weight: 700;
+      color: #494c62;
+      margin: 0;
+    }
+  }
+
+  .separator {
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    background: #e0e0e0;
+    height: 2px;
+    width: 100%;
+    position: relative;
+
+    .violet-segment {
+      width: 7rem;
+      height: 4px;
+      position: absolute;
+      background: #816bff;
+      top: -1px;
+    }
+  }
 }
 
 @media screen and (max-height: 800px) {
@@ -8,6 +36,14 @@
     padding: 10px;
     .productListInner {
       white-space: nowrap;
+    }
+    .widget-head {
+      h2 {
+        font-size: 1rem;
+        font-weight: 700;
+        color: #494c62;
+        margin: 0;
+      }
     }
   }
 }

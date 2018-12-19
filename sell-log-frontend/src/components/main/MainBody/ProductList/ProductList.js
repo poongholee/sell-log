@@ -8,7 +8,7 @@ class ProductList extends Component {
     this._getProduct();
   }
   _callApi = () => {
-    return fetch("http://192.168.43.231:4000/api/product", {
+    return fetch(`http://localhost:4000/api/product/`, {
       method: "get"
     })
       .then(response => response.json())
@@ -21,8 +21,9 @@ class ProductList extends Component {
     });
   };
   _renderProduct = () => {
+    console.log(this.props.id);
     const products = this.state.products.map((product, index) => {
-      if (index < 5) {
+      if (index < 5 && product._id != this.props.id) {
         return (
           <Product
             _id={product._id}
@@ -41,7 +42,12 @@ class ProductList extends Component {
   render() {
     return (
       <div className="productListSection">
-        {this.props.listTitle}
+        <div className="widget-head">
+          <h2>{this.props.listTitle}</h2>
+        </div>
+        <div className="separator">
+          <div className="violet-segment" />
+        </div>
         <div className="productListInner">
           {this.state.products ? this._renderProduct() : "Loading"}
         </div>

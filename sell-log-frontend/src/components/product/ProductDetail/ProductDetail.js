@@ -16,7 +16,7 @@ class ProductDetail extends Component {
             />
           </div>
           <div className="detail-box">
-            <ProductList listTitle="관련상품" />
+            <ProductList listTitle="관련 상품" id={this.props.id} />
           </div>
         </div>
       </div>

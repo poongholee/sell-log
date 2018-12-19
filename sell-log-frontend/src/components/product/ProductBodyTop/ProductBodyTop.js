@@ -5,12 +5,22 @@ import "./ProductBodyTop.scss";
 
 class ProductBodyTop extends Component {
   onCart = () => {
-    var cart = window.confirm(
+    let cart = window.confirm(
       "장바구니에 담겼습니다. 장바구니로 이동하시겠습니까?"
     );
     if (cart) {
     } else {
     }
+  };
+  state = {
+    numberJoin: this.props.numberJoin
+  };
+  onClickJoin = () => {
+    return this.props.numberJoin < this.state.numberJoin
+      ? ""
+      : this.setState({
+          numberJoin: this.state.numberJoin + 1
+        });
   };
   render() {
     return (
@@ -18,10 +28,12 @@ class ProductBodyTop extends Component {
         <div className="product-body-content">
           <section>
             <div className="thumbnail">
-              <img
-                className="thumbnail-content"
-                src={this.props.thumbnailUrl}
-              />
+              <Link to="#">
+                <img
+                  className="thumbnail-content"
+                  src={this.props.thumbnailUrl}
+                />
+              </Link>
               <div className="item-action-buttons">
                 <div className="action-button"> 좋아요 </div>
                 <div className="action-button" onClick={this.onCart}>
@@ -30,20 +42,36 @@ class ProductBodyTop extends Component {
               </div>
             </div>
             <div className="info">
-              <div className="sub-info"> 전자제품 </div>
-              <h1> {this.props.title} </h1>
+              <div className="sub-info"> {this.props.description} </div>
+              <h1> {this.props.name} </h1>
               <div className="below">
                 <div className="left">
-                  <div className="people"> 현재원/전채원</div>
-                  <div className="delivery"> 배송정보 </div>
-                  <div className="price"> {this.props.price} 원 </div>
+                  <div className="people">
+                    {" "}
+                    {this.props.minCount}/{this.state.numberJoin}
+                  </div>
+                  <div className="delivery">
+                    <span>원가 : {this.props.price} 원</span> <br />
+                    할인율 : {this.props.discountRate} %
+                  </div>
+                  <div className="price">
+                    {" "}
+                    공구가격 :{" "}
+                    {Math.round(
+                      this.props.price * (100 - this.props.discountRate) * 0.01
+                    )}{" "}
+                    원
+                  </div>
                 </div>
-                <div className="buy-button">
+                <div className="buy-button" onClick={() => this.onClickJoin()}>
                   <Link to="#">공동구매</Link>
                 </div>
               </div>
             </div>
           </section>
+          <div className="buy-button-mobile" onClick={() => this.onClickJoin()}>
+            <Link to="#">공동구매</Link>
+          </div>
         </div>
       </div>
     );

@@ -34,3 +34,9 @@
     width: 768px;
   }
 }
+
+@media (max-width: 767px) {
+  .product-detail {
+    width: 100%;
+  }
+}
