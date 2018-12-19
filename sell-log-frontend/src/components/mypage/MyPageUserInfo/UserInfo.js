@@ -20,13 +20,13 @@ class UserInfo extends Component {
                         <div className="row">
                             <div className="name">이메일</div>
                             <div className="row-content">
-                                <input className="input" value={cookie.load('email')}></input>
+                                <input type="text" className="input" value={cookie.load('email')} onChange={this.props.handleEmailChanged}></input>
                             </div>
                         </div>
                         <div className="row">
                             <div className="name">이름</div>
                             <div className="row-content">
-                                <input className="input" value={cookie.load('name')}></input>
+                                <input type="text" className="input" value={cookie.load('name')} onChange={this.props.handleNameChanged}></input>
                             </div>
                         </div>
                         <div className="row">
@@ -58,7 +58,7 @@ class UserInfo extends Component {
                         <div className="row">
                             <div className="name">비밀번호</div>
                             <div className="row-content">
-                                <div className="lined-text">비밀번호 변경</div>
+                                <input type="password" className="input" onChange={this.props.handlePasswordChanged}></input>
                             </div>
                         </div>
                         <div className="row"></div>
@@ -120,7 +120,7 @@ class UserInfo extends Component {
                         <div className="lined-text" onClick={this._logout}>로그아웃</div>
                     </div>
                     <div className="save-button-wrapper">
-                        <button class="button">저장</button>
+                        <button class="button" onClick={this.props.updateUserInfo}>저장</button>
                     </div>
                 </div>
             </div>
