@@ -5,7 +5,7 @@ const cartCtrl = require('./cart.ctrl');
 const cart = new Router();
 
 cart.get('/', cartCtrl.list);
-cart.get('/user', validation.checkLogin, cartCtrl.read);
+cart.get('/user/:userId', validation.checkLogin, cartCtrl.read);
 cart.post('/', validation.checkLogin, cartCtrl.write);
 
 module.exports = cart;

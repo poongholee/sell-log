@@ -42,10 +42,10 @@ exports.list = async (ctx) => {
 }
 
 exports.read = async (ctx) => {
-    const userId = SessionStorage.getSessionUserId(ctx);
+    const { userId } = ctx.params;
 
     try {
-        const cart = await Cart.find({ userId: userId }).exec();
+        const cart = await Cart.find({ userId: userId }).populate('userId').exec();
 
         if (!cart) {
             ctx.status = 404;

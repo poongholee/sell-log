@@ -1,4 +1,5 @@
 const Order = require('models/Order');
+const Product = require('models/Product');
 const Joi = require('joi');
 const SessionStorage = require('storage/SessionStorage')
 
@@ -42,10 +43,10 @@ exports.list = async (ctx) => {
 }
 
 exports.read = async (ctx) => {
-    const userId = SessionStorage.getSessionUserId(ctx);
+    const { userId } = ctx.params;
 
     try {
-        const order = await Order.find({ userid: userId }).exec();
+        const order = await Order.find({ userId: userId }).exec();
 
         if (!order) {
             ctx.status = 404;
