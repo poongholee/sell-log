@@ -1,7 +1,16 @@
 import React, { Component } from 'react';
 import './UserInfo.scss';
+import cookie from 'react-cookies';
 
 class UserInfo extends Component {
+
+    _logout = () => {
+        cookie.remove('name');
+        cookie.remove('email');
+        window.location.href = "/";
+        alert('로그아웃 되셨습니다.')
+    }
+
     render() {
         return (
             <div className="contents">
@@ -9,15 +18,15 @@ class UserInfo extends Component {
                     <div className="section_name">계정</div>
                     <div className="section-content">
                         <div className="row">
-                            <div className="name">닉네임</div>
+                            <div className="name">이메일</div>
                             <div className="row-content">
-                                <input className="input" value="dlvndghs"></input>
+                                <input className="input" value={cookie.load('email')}></input>
                             </div>
                         </div>
                         <div className="row">
                             <div className="name">이름</div>
                             <div className="row-content">
-                                <input className="input" value="이풍호"></input>
+                                <input className="input" value={cookie.load('name')}></input>
                             </div>
                         </div>
                         <div className="row">
@@ -45,17 +54,7 @@ class UserInfo extends Component {
                                 </div>
                             </div>
                         </div>
-                        <div className="row">
-                            <div className="name">휴대폰번호</div>
-                            <div className="row-content">
-                                <div className="phone">
-                                    <div className="phone-block">dlvndghs@naver.com</div>
-                                    <div className="button-wrapper">
-                                        <div className="button">이메일 변경</div>
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
+                        
                         <div className="row">
                             <div className="name">비밀번호</div>
                             <div className="row-content">
@@ -118,7 +117,7 @@ class UserInfo extends Component {
                 </div>
                 <div className="footer">
                     <div className="unregister">
-                        <div className="lined-text">계정 탈퇴</div>
+                        <div className="lined-text" onClick={this._logout}>로그아웃</div>
                     </div>
                     <div className="save-button-wrapper">
                         <button class="button">저장</button>

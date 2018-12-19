@@ -1,4 +1,5 @@
 .MainHeadTop {
+    /*
   width: 100%;
   margin: 0 auto;
   min-height: 116px;
@@ -7,15 +8,39 @@
   background: #816bff;
   position: fixed;
   top: 0;
-  
-  .logo {
-    display: block;
-    position: absolute;
-    text-decoration: none;
-    color: white;
-    top: 40px;
-    left: 179px;
-    font-size: 32px;
-    font-weight: 700;
+*/
+    background: #816bff;
+    position: relative;
+
+  .inner_wrap {
+    width: 1200px;
+    height: 116px;
+    position: relative;
+    margin: 0 auto;
+
+    h1 {
+
+        z-index: 5;
+        font-size: 32px;
+        font-weight: 700;
+        color: white;
+          
+        a {
+            text-decoration: none;
+        }
+    }
+
+    .logo {
+        display: block;
+        position: absolute;
+        text-decoration: none;
+        color: white;
+        top: 30px;
+        left: 10px;
+        font-size: 42px;
+        font-weight: 700;
+    }
   }
+  
+  
 }

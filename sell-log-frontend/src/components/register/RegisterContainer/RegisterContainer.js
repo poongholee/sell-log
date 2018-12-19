@@ -3,6 +3,8 @@ import './RegisterContainer.scss';
 import LoginHeader  from 'components/login/LoginHeader';
 import RegisterSelect from 'components/register/RegisterSelect';
 import RegisterInput from 'components/register/RegisterInput';
+import { API_URL } from 'constant.js';
+
 
 class RegisterContainer extends Component {
 
@@ -50,7 +52,7 @@ class RegisterContainer extends Component {
     // 회원가입 클릭 이벤트 메소드
     // http://172.16.6.131:4000/api/user/login, 
     _register = (email, name, password) => {
-        fetch('http://localhost:4000/api/user/signUp',{
+        fetch(`${API_URL}/api/user/signUp`,{
 			method: 'POST',
 			headers:{
 				'Content-Type': 'application/json'
@@ -63,9 +65,9 @@ class RegisterContainer extends Component {
         })
         .then((response) => response.json()) 
         .then(json => {
-            alert("hi")
             let username = json.name;
             if(username) {
+                
                 alert(username + '님 회원가입을 축하드립니다!')
                 window.location.href = "/";
             } else {

@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Link } from 'react-router-dom';
 import './MainFooterBody.scss'
+import logo from 'static/images/sell.png';
 
 class MainFooterBody extends Component {
     render() {
@@ -10,7 +11,9 @@ class MainFooterBody extends Component {
                     <ul className="list-area">
                         <li>
                             <p className="logo">
-                                <Link to="/" alt="SELLLOGLOGO"/>
+                                <Link to="/" alt="SELLLOGLOGO">
+                                    <img alt="로고" src={logo} />
+                                </Link>
                             </p>
                             <h2>SPACE CREATE</h2>
                             <p>대표이사 : XXX | 사업자등록번호 : XXX</p>

@@ -1,5 +1,216 @@
 .userBasket {
 
+    h2.sub-title2 {
+        width: 1020px;
+        margin: 40px auto 10px;
+        color: #333;
+        font-size: 20px;
+        font-weight: 400;
+    }
+
+    table { 
+        border-spacing: 0;
+    }
+
+    .tbl_prd_list {
+        width: 100%;
+
+        caption {
+            width: 0;
+            height: 0;
+            text-indent: -9999px;
+        }
+
+        thead {
+            th {
+                height: 40px;
+                border-top: 2px solid #d6d6d6;
+                border-bottom: 1px solid #ccc;
+                background: #fafafa;
+
+                .checkbox {
+                    width: 12px;
+                    height: 12px;
+                    margin: 0 auto;
+                    background: none;
+                    vertical-align: middle;
+                }
+            }
+        }
+
+        tbody {
+            td {
+                border-bottom: 1px solid #e6e6e6;
+                text-align: center;
+
+                .tbl_cont_area {
+                    display: table-row;
+
+                    .tbl_cell {
+                        display: table-cell;
+                        vertical-align: middle;
+                    }
+
+                    .tbl_cell.w40 {
+                        width: 40px;
+                    }
+
+                    .tbl_cell.w390 {
+                        width: 390px;
+
+                        .prd_info {
+                            display: table-cell;
+                            position: relative;
+                            height: 145px;
+                            padding: 30px 30px 30px 125px;
+                            border-left: 0;
+                            text-align: left;
+                            vertical-align: middle;
+
+                            .prd_img {
+                                position: absolute;
+                                top: 50%;
+                                left: 0;
+                                width: 125px;
+                                height: 85px;
+                                margin-top: -42px;
+                                text-align: center;
+
+                                img {
+                                    width: auto !important;
+                                    max-width: 85px;
+                                    height: auto !important;
+                                    max-height: 85px;
+                                }
+                            }
+
+                            .prd_name {
+                                display: inline-block;
+                                margin-bottom: 5px;
+                            }
+                        }
+                    }
+                    .tbl_cell.w110 {
+                        width: 110px;
+                        border-left: 1px solid #e6e6e6;
+
+                        .cur_price {
+                            display: block;
+                            color: #222;
+                            font-weight: 700;
+
+                            .tx_num {
+                                letter-spacing: -0.02em !important;
+                                font-weight: 700;
+                            }
+                        }
+
+                        .org_price {
+                            display: block;
+                            font-size: 12px;
+                            color: #b5b5b5;
+                            text-decoration: line-through;
+
+                            .tx_num {
+                                font-weight: normal;
+                            }
+                        }
+
+                        .pur_price {
+                            display: block;
+                            color: #f47330;
+                            font-weight: 700;
+
+                            .tx_num {
+                                letter-spacing: -0.02em !important;
+                                font-weight: 700;
+                            }
+                        }
+                    }
+
+                    .tbl_cell.w120 {
+                        width: 120px;
+                        border-left: 1px solid #e6e6e6;
+                        
+                        .prd_delivery {
+                            color: #666;
+                            font-size: 12px;
+
+                            strong {
+                                display: block;
+                                color: #222;
+                                font-size: 14px;
+                                
+                                .ex {
+                                    display: block;
+                                    color: #666;
+                                    font-size: 12px;
+                                    font-weight: normal;
+                                }
+                            }
+                        }
+                    }
+                    .tbl_cell.w100 {
+                        width: 100px;
+                        border-left: 1px solid #e6e6e6;
+                    }  
+                    .tbl_cell.w150 {
+                        width: 150px;
+                        border-left: 1px solid #e6e6e6;
+
+                        .btn_group {
+                            .btnSmall {
+                                width: 109px;
+                                margin-bottom: 5px;
+                                height: 28px;
+                                padding: 0 5px;
+                                font-size: 12px !important;
+                                line-height: 28px;
+                                border-radius: 5px;
+
+                                span {
+                                    display: inline-block;
+                                    min-width: 40px;
+                                    margin-left: 3px;
+                                }
+                            }
+
+                            .wGreen {
+                                border: 1px solid #969937;
+                                color: #969937;
+                                background: #fff;
+                            }
+
+                            .wGray {
+                                border: 1px solid #aaa;
+                                color: #666;
+                                background: #fff;
+                            }
+                            .btnSmall.zzim {
+                                background: url(https://www.oliveyoung.co.kr/pc-static-root/image/comm/ico_btn_zzim.png) no-repeat 30px 8px;
+                            }
+                            .btnSmall.delete {
+                                background: url(https://www.oliveyoung.co.kr/pc-static-root/image/comm/ico_btn_del.png) no-repeat 35px 8px;
+                            }
+                    }  
+            }
+                }
+            }
+        }
+
+    }
+
+
+
+    .basket_price_info {
+        overflow: hidden;
+        margin: 10px 0 0;
+
+        .btn_area {
+            float: left;
+            width: 300px;
+        }
+    }
 
     .total_price_info {
         margin: 60px 0 0;
@@ -10,23 +221,14 @@
             position: relative;
             overflow: hidden;
             width: 100%;
-            height: 110px;
+            height: 140px;
             font-weight: 700;
 
-            .detail_price > p.tx_sale > span {
-                color: #f47330;
-                display: block;
-                margin-top: 10px;
-            }
-
-            .detail_price>p:first-child {
-                border-left: 1px solid #efefef;
-            }
-            .detail_price>p {
+            p {
                 float: left;
                 width: 340px;
                 height: 110px;
-                padding: 30px 0 0;
+                padding: 30px 0 30px 0;
                 text-align: center;
                 font-size: 16px;
                 color: #666;
@@ -36,6 +238,46 @@
                     display: block;
                     color: #222;
                     margin-top: 10px;
+    
+                    .tx_num {
+                        font-size: 24px;
+                        margin-right: 2px;
+                        vertical-align: -2px;
+                    }
+                }
+            }
+
+            p:first-child {
+                border-left: 1px solid #efefef;
+            }
+
+            .tx_sign2 {
+                position: absolute;
+                margin: -15px 0 0 -15px;
+            }
+
+            .minus {
+                top: 50%;
+                left: 340px;
+            }
+
+            .tx_sale {
+                span {
+                    color: #f47330;
+                    display: block;
+                    margin-top: 10px;
+
+                    .tx_num {
+                        font-size: 24px;
+                        margin-right: 2px;
+                        vertical-align: -2px;
+                        letter-spacing: -0.02em !important;
+                        font-weight: 700;
+                    }
+                }
+                .plus {
+                    top: 50%;
+                    left: 680px;
                 }
             }
 
@@ -82,6 +324,41 @@
             color: #222;
             font-weight: 700;
             position: relative;
+
+            .tx_text {
+                position: absolute;
+                top: 50%;
+                left: 30px;
+                height: 30px;
+                margin-top: -11px;
+                color: #888;
+                font-size: 14px;
+                line-height: 22px;
+            }
+
+            .tx_text:before {
+                content: '';
+                display: inline-block;
+                width: 22px;
+                height: 22px;
+                margin: 0 7px 2px 0;
+                background: url(https://www.oliveyoung.co.kr/pc-static-root/image/comm/ico_arrow_01.gif) no-repeat;
+                vertical-align: middle;
+            }
+
+            .tx_price {
+                color: #ff2828;
+                font-size: 16px;
+
+                .tx_num {
+                    margin-left: 10px;
+                    font-size: 26px;
+                    margin-right: 2px;
+                    vertical-align: -2px;
+                    letter-spacing: -0.02em !important;
+                    font-weight: 700;
+                }
+            }
         }
     }
 
@@ -95,10 +372,10 @@
             font-size: 16px;
             height: 50px;
             background-color: #fff;
-            border: 1px solid #f7a341;
+            border: 1px solid #816bff;
             padding: 11px 0 9px;
             line-height: 28px;
-            color: #f7a341;
+            color: #816bff;
             border-radius: 5px;
             text-align: center;
             box-shadow: none;
@@ -106,7 +383,7 @@
         }
 
         .btnOrange {
-            background-color: #f7a341;
+            background-color: #816bff;
             color: #fff;
             margin-left: 7px;
         }
@@ -126,4 +403,5 @@
             font-weight: 700;
         }
     }
+
 }

@@ -41,15 +41,17 @@ class ProductList extends Component {
   state = {};
   render() {
     return (
-      <div className="productListSection">
+      <div className="productList">
         <div className="widget-head">
-          <h2>{this.props.listTitle}</h2>
+            <h2>{this.props.listTitle}</h2>
         </div>
         <div className="separator">
-          <div className="violet-segment" />
+            <div className="violet-segment"></div>
         </div>
-        <div className="productListInner">
-          {this.state.products ? this._renderProduct() : "Loading"}
+        <div className="productListSection"> 
+            <div className="productListInner">
+            {this.state.products ? this._renderProduct() : "Loading"}
+            </div>
         </div>
       </div>
     );
