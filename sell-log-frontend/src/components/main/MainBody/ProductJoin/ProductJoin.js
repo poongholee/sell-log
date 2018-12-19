@@ -7,6 +7,11 @@ class ProductJoin extends Component {
     numberJoin: this.props.numberJoin
   };
   onClickJoin = () => {
+    return this.props.numberJoin < this.state.numberJoin
+      ? ""
+      : this._numberJoin();
+  };
+  _numberJoin = () => {
     this.setState({
       numberJoin: this.state.numberJoin + 1
     });

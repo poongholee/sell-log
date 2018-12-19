@@ -7,9 +7,7 @@ class ProductBody extends Component {
     this._getProduct();
   }
   _callApi = () => {
-    let callUrl = "http://192.168.43.231:4000/api/product/" + this.props.id;
-    console.log(callUrl);
-    return fetch(callUrl, {
+    return fetch(`http://localhost:4000/api/product/${this.props.id}`, {
       method: "get"
     })
       .then(response => response.json())
@@ -31,8 +29,13 @@ class ProductBody extends Component {
           price={product.price}
           discountRate={product.discountRate}
           minCount={product.minCount}
+          numberJoin={0}
         />
-        <ProductBodyDetail detailUrl={product.detailUrl} name={product.name} />
+        <ProductBodyDetail
+          detailUrl={product.detailUrl}
+          name={product.name}
+          id={product._id}
+        />
       </div>
     );
   };

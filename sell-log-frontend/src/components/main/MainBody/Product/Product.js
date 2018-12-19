@@ -22,14 +22,14 @@ class Product extends Component {
             />
           </div>
           <div className="product-info">
-            <ProductInfo title={this.props.name} price={this.props.price} />
+            <ProductInfo
+              title={this.props.name}
+              price={this.props.price * (100 - this.props.discountRate) * 0.01}
+            />
           </div>
         </div>
         <div className="product-join">
-          <ProductJoin
-            numberTotal={this.props.numberTotal}
-            numberJoin={this.props.numberJoin}
-          />
+          <ProductJoin numberTotal={this.props.minCount} numberJoin={0} />
         </div>
       </div>
     );
@@ -53,7 +53,7 @@ class ProductInfo extends Component {
     return (
       <div className="product-info-content">
         <div className="product-title">{this.props.title}</div>
-        <div className="product-price">{this.props.price}</div>
+        <div className="product-price">{Math.round(this.props.price)}</div>
       </div>
     );
   }
