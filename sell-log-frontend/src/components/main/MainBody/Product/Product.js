@@ -1,4 +1,3 @@
-
 import React, { Component } from "react";
 import ProductJoin from "components/main/MainBody/ProductJoin";
 
@@ -14,7 +13,7 @@ class Product extends Component {
       <div className="product">
         <div
           className="product-content"
-          onClick={() => this.onLinkImage(this.props._id)}
+          onClick={() => this.onLinkImage(this.props.id)}
         >
           <div className="product-image">
             <ProductImage
@@ -30,7 +29,11 @@ class Product extends Component {
           </div>
         </div>
         <div className="product-join">
-          <ProductJoin numberTotal={this.props.minCount} numberJoin={0} />
+          <ProductJoin
+            numberTotal={this.props.minCount}
+            numberJoin={0}
+            id={this.props.id}
+          />
         </div>
       </div>
     );

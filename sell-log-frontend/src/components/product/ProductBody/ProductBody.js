@@ -1,17 +1,16 @@
 import React, { Component } from "react";
 import ProductBodyTop from "components/product/ProductBodyTop/ProductBodyTop.js";
 import ProductBodyDetail from "components/product/ProductDetail/ProductDetail.js";
+import { API_URL } from "constant.js";
 import "./ProductBody.scss";
 class ProductBody extends Component {
   componentDidMount() {
     this._getProduct();
   }
   _callApi = () => {
-    return fetch(`http://localhost:4000/api/product/${this.props.id}`, {
+    return fetch(`${API_URL}/api/product/${this.props.id}`, {
       method: "get"
-    })
-      .then(response => response.json())
-      .then(this.state.product);
+    }).then(response => response.json());
   };
   _getProduct = async () => {
     const product = await this._callApi();
@@ -23,6 +22,7 @@ class ProductBody extends Component {
     return (
       <div className="ProductBody">
         <ProductBodyTop
+          id={product._id}
           thumbnailUrl={product.thumbnailUrl}
           name={product.name}
           description={product.description}
