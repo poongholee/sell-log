@@ -3,8 +3,7 @@ import './RecommendContent.scss';
 import { Link } from 'react-router-dom';
 
 class RecommendContent extends Component {
-    render() {
-        
+    render() {     
         return (
             <div className="recommendContent">
                 <div className="widget-content">

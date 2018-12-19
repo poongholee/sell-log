@@ -35,16 +35,16 @@ class MainFooterTop extends Component {
                     </ul>
                     <div className="sel_family_group">
                         <select
-                            value="CJ그룹 계열사 바로가기"
+                            value="셀로그 계열사 바로가기"
                         >
-                            <option value="CJ주식회사">CJ그룹 계열사 바로가기</option>
-                            <option value="CJ주식회사">CJ주식회사</option>
-                            <option value="CJ제일제당 (식품)">CJ제일제당 (식품)</option>
-                            <option value="CJ프레시웨이">CJ프레시웨이</option>
-                            <option value="CJ푸드빌">CJ푸드빌</option>
-                            <option value="CJ엠디원">CJ엠디원</option>
-                            <option value="CJ제일제당 (바이오)">CJ제일제당 (바이오)</option>
-                            <option value="CJENM(오쇼핑)">CJENM(오쇼핑)</option>
+                            <option value="셀로그 주식회사">셀로그 계열사 바로가기</option>
+                            <option value="셀로그 주식회사">셀로그 주식회사</option>
+                            <option value="셀로그 제일제당 (식품)">셀로그 제일제당 (식품)</option>
+                            <option value="셀로그 프레시웨이">셀로그 프레시웨이</option>
+                            <option value="셀로그 푸드빌">셀로그 푸드빌</option>
+                            <option value="셀로그 엠디원">셀로그 엠디원</option>
+                            <option value="셀로그 제일제당 (바이오)">셀로그 제일제당 (바이오)</option>
+                            <option value="셀로그 ENM(오쇼핑)">셀로그(오쇼핑)</option>
                         </select>
                     </div>
                 </div>

@@ -2,7 +2,6 @@
     width: 1020px;
     margin: 0 auto;
     list-style: none;
-    border-bottom: 1px solid #bbb;
 }
 
 .list-area {
@@ -33,9 +32,10 @@
             line-height: 0;
 
             img {
-                background: url(../../../../static/images/sell-logo.png) no-repeat;
-                width: 146px;
-                height: 24px;
+                height: 100px;
+                position: absolute;
+                top: -40px;
+                left: 20px
             }
         }
 

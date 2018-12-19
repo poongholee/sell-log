@@ -3,6 +3,8 @@ import { Link } from 'react-router-dom';
 import './Login.scss';
 import  LoginHeader  from './../LoginHeader';
 import  LoginContents  from './../LoginContents';
+import { API_URL } from 'constant.js';
+import cookie from 'react-cookies';
 
 class Login extends Component {
 
@@ -25,7 +27,7 @@ class Login extends Component {
     }
 
     _login = (email, password) => {
-        fetch('http://localhost:4000/api/user/login',{
+        fetch(`${API_URL}/api/user/login`,{
 			method: 'POST',
 			headers:{
 				'Content-Type': 'application/json'
@@ -38,9 +40,19 @@ class Login extends Component {
         .then((response) => response.json()) 
         .then(json => {
             let username = json.name;
+            let useremail = json.email;
             if(username) {
                 alert(username + '님 환영합니다!')
+
+                // 쿠키 저장
+                const expires = new Date()
+                expires.setDate(expires.getDate() + 14)
+
+                cookie.save('name', username);
+                cookie.save('email', useremail);
+
                 window.location.href = "/";
+                //alert("name: " + cookie.load('name'))
             } else {
                 alert('로그인 실패!')
             }
