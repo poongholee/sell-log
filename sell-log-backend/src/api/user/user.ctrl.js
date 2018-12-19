@@ -15,6 +15,18 @@ const signUpValidateCheck = ((password) => {
     }
 });
 
+const createUser = (email, name, password) => {
+    const user = new User({
+        email: email,
+        password: password,
+        name: name
+    });
+
+    user.password = user.generateHash(user.password);
+
+    return user;
+}
+
 exports.signUp = async (ctx) => {
     const { email, password, name } = ctx.request.body;
 
@@ -27,13 +39,7 @@ exports.signUp = async (ctx) => {
         return;
     }
 
-    const user = new User({
-        email: email,
-        password: password,
-        name: name
-    });
-
-    user.password = user.generateHash(user.password);
+    const user = createUser(email, name, password);
 
     try {
         await user.save();
@@ -99,4 +105,17 @@ exports.remove = async (ctx) => {
 exports.logout = (ctx) => {
     ctx.session = null;
     ctx.status = 204;
+}
+
+exports.update = async (ctx) => {
+    const { email, name, password } = ctx.request.body;
+
+    try {
+        const user = createUser(email, name, password);
+        const updatedUser = await User.updateOne({ email: email }, { name: user.name, password: user.password });
+
+        ctx.body = updatedUser;
+    } catch (e) {
+        ctx.throw(e, 500);
+    }
 }
