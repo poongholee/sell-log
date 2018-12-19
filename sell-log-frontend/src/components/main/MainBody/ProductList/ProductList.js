@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Product from "../Product";
+import { API_URL } from "constant.js";
 import "./ProductList.scss";
 
 class ProductList extends Component {
@@ -8,7 +9,7 @@ class ProductList extends Component {
     this._getProduct();
   }
   _callApi = () => {
-    return fetch(`http://localhost:4000/api/product/`, {
+    return fetch(`${API_URL}/api/product/`, {
       method: "get"
     })
       .then(response => response.json())
@@ -26,7 +27,7 @@ class ProductList extends Component {
       if (index < 5 && product._id != this.props.id) {
         return (
           <Product
-            _id={product._id}
+            id={product._id}
             thumbnailUrl={product.thumbnailUrl}
             name={product.name}
             price={product.price}
@@ -43,15 +44,15 @@ class ProductList extends Component {
     return (
       <div className="productList">
         <div className="widget-head">
-            <h2>{this.props.listTitle}</h2>
+          <h2>{this.props.listTitle}</h2>
         </div>
         <div className="separator">
-            <div className="violet-segment"></div>
+          <div className="violet-segment" />
         </div>
-        <div className="productListSection"> 
-            <div className="productListInner">
+        <div className="productListSection">
+          <div className="productListInner">
             {this.state.products ? this._renderProduct() : "Loading"}
-            </div>
+          </div>
         </div>
       </div>
     );
