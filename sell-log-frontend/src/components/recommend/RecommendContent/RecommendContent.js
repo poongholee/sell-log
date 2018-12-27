@@ -18,7 +18,7 @@ class RecommendContent extends Component {
                         </div>
                         <div className="theme-content">
                             <div className="column">
-                                <div className="big" src={this.props.bigImage}>
+                                <div className="big" style={{background:this.props.bigImage}}>
                                     <div className="layer">
                                         <Link to="" className="item-title">{this.props.bigTitle}</Link>
                                     </div>
@@ -27,7 +27,7 @@ class RecommendContent extends Component {
                             <div className="column">
                                 <div className="mini">
                                     <div className="thumbnail-wrapper">
-                                        <div className="thumbnail" src={this.props.miniImage1}></div>
+                                        <div className="thumbnail" style={{background:this.props.miniImage1}}></div>
                                     </div>
                                     <div className="layer">
                                         <Link to="" className="item-title">{this.props.miniTitle1}</Link>
@@ -35,7 +35,7 @@ class RecommendContent extends Component {
                                 </div>
                                 <div className="mini">
                                     <div className="thumbnail-wrapper">
-                                        <div className="thumbnail" src={this.props.miniImage2}></div>
+                                        <div className="thumbnail" style={{background:this.props.miniImage2}}></div>
                                     </div>
                                     <div className="layer">
                                         <Link to="" className="item-title">{this.props.miniTitle2}</Link>
@@ -43,7 +43,7 @@ class RecommendContent extends Component {
                                 </div>
                                 <div className="mini">
                                     <div className="thumbnail-wrapper">
-                                        <div className="thumbnail" src={this.props.miniImage3}></div>
+                                        <div className="thumbnail" style={{background:this.props.miniImage3}}></div>
                                     </div>
                                     <div className="layer">
                                         <Link to="" className="item-title">{this.props.miniTitle3}</Link>
@@ -51,7 +51,7 @@ class RecommendContent extends Component {
                                 </div>
                                 <div className="mini">
                                     <div className="thumbnail-wrapper">
-                                        <div className="thumbnail" src={this.props.miniImage4}></div>
+                                        <div className="thumbnail" style={{background:this.props.miniImage4}}></div>
                                     </div>
                                     <div className="layer">
                                         <Link to="" className="item-title">{this.props.miniTitle4}</Link>
@@ -59,7 +59,7 @@ class RecommendContent extends Component {
                                 </div>
                                 <div className="mini">
                                     <div className="thumbnail-wrapper">
-                                        <div className="thumbnail" src={this.props.miniImage5}></div>
+                                        <div className="thumbnail" style={{background:this.props.miniImage5}}></div>
                                     </div>
                                     <div className="layer">
                                         <Link to="" className="item-title">{this.props.miniTitle5}</Link>
@@ -67,7 +67,7 @@ class RecommendContent extends Component {
                                 </div>
                                 <div className="mini">
                                     <div className="thumbnail-wrapper">
-                                        <div className="thumbnail" src={this.props.miniImage6}></div>
+                                        <div className="thumbnail" style={{background:this.props.miniImage6}}></div>
                                     </div>
                                     <div className="layer">
                                         <Link to="" className="item-title">{this.props.miniTitle6}</Link>
